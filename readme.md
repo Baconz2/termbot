@@ -2,6 +2,12 @@
 
 this bot, based off esmBot (because i can't code lmao) is a great way to get a wicked digital wedgie
 
+the command (terminal, located at commands/terminal.js), will allow *anything* to run
+### yes, even sudo 
+(although it does ask for your pass in the terminal)
+<img src="https://media.discordapp.net/attachments/734119604007206953/766902082623635518/unknown.png">
+so make sure you haven't recently run any sudo commands, otherwise *you could be able to run rm on the entire drive*
+
 
 ## Usage
 original setup settings:
