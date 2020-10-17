@@ -9,8 +9,8 @@ original setup settings:
 The bot is only supported on Linux/Unix-like operating systems. If you want to run it locally for testing purposes, you should install ImageMagick (version >=7), FFmpeg, MongoDB, and the Microsoft core fonts:
 
 
-# On most Debian/Ubuntu-based distros you will need to build ImageMagick from source instead of installing from apt/similar package managers.
-# Instructions to do so can be found here: https://imagemagick.org/script/install-source.php
+On most Debian/Ubuntu-based distros you will need to build ImageMagick from source instead of installing from apt/similar package managers.
+Instructions to do so can be found here: https://imagemagick.org/script/install-source.php
 ```shell
 sudo apt-get install imagemagick ffmpeg mongodb ttf-mscorefonts-installer
 ```
