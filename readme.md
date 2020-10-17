@@ -20,7 +20,7 @@ Instructions to do so can be found here: https://imagemagick.org/script/install-
 ```shell
 sudo apt-get install imagemagick ffmpeg mongodb ttf-mscorefonts-installer
 ```
-# notice: i'm not too sure what's exactly required for *only* the terminal command, but experiment around and let me know
+# notice: i know imagemagick isn't required but it's a dependancy until i can figure out how to remove that dependancy
 After that, you should install the rest of the dependencies using npm:
 
 ```shell
