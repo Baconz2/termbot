@@ -10,7 +10,7 @@ so make sure you haven't recently run any sudo commands, otherwise *you could be
 
 
 ## Usage
-original setup settings:
+
 
 The bot is only supported on Linux/Unix-like operating systems. If you want to run it locally for testing purposes, you should install ImageMagick (version >=7), FFmpeg, MongoDB, and the Microsoft core fonts:
 
@@ -20,7 +20,7 @@ Instructions to do so can be found here: https://imagemagick.org/script/install-
 ```shell
 sudo apt-get install imagemagick ffmpeg mongodb ttf-mscorefonts-installer
 ```
-
+# notice: i'm not too sure what's exactly required for *only* the terminal command, but experiment around and let me know
 After that, you should install the rest of the dependencies using npm:
 
 ```shell
