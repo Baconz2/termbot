@@ -41,7 +41,6 @@ function optionalReplace(token) {
 };
 
 // clean(text) to clean message of any private info or mentions
-// modified to assume text is always a string
 function clean(text) {
   if (typeof text !== "string")
     text = util.inspect(text, { depth: 1 });
