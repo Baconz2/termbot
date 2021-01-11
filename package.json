@@ -1,0 +1,23 @@
+{
+  "name": "termbot",
+  "version": "1.0.0",
+  "description": "discord bot that sucks",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Baconz2/terminal-bot.git"
+  },
+  "author": "evyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Baconz2/terminal-bot/issues"
+  },
+  "homepage": "https://github.com/Baconz2/terminal-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  }
+}
