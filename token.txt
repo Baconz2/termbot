@@ -1,1 +1,0 @@
-Put your bot's token here, make sure it's on one line.
