@@ -1,2 +1,6 @@
+# js modules
 node_modules/
+# dotenv file so that the token isnt leaked
 .env
+# output file for long messages
+output.txt
