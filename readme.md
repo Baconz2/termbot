@@ -1,6 +1,6 @@
 ### idk really
 
-this bot, based off esmBot (because i can't code lmao) is a great way to get a wicked digital wedgie
+this bot, based off esmBot (i'm attempting to rewrite it, check the old branch for the one based off esmbot that works) is a great way to get a wicked digital wedgie
 
 the command (terminal, located at commands/terminal.js), will allow *anything* to run
 ### yes, even sudo 
