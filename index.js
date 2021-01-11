@@ -11,7 +11,7 @@ client.once("ready", () => {
 	console.log("bot running");
 });
 
-client.on("message", async (message) => {
+client.on("message", message => {
 	if (message.content.startsWith(messageStart)) {
 		const command = message.content.slice(messageStart.length);
 		console.log("running command", command);
