@@ -5,7 +5,7 @@ import dotenv from "dotenv"
 
 dotenv.config(); // load and configure .env file
 const client = new Client(); // makes new client
-const messageStart = `${process.env.PREFIX}`;
+const messageStart = `${process.env.PREFIX} `;
 
 client.once("ready", () => {
 	console.log("bot running");
