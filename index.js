@@ -1,9 +1,9 @@
 const Discord = require("discord.js"); // imports the discord.js library
 const fs = require("fs"); // imports the filesystem library
-const {spawnSync} = require( 'child_process' );
+const spawnSync = require("child_process").spawnSync;
+require("dotenv").config(); // load and configure .env file
 
 const client = new Discord.Client(); // makes new client
-const token = fs.readFileSync("token.txt").toString(); // reads token from file token.txt
 
 client.once("ready", () => {
 	console.log("supposedly running?");
@@ -15,7 +15,7 @@ client.on("message", async (message) => {
 		try {
 			const comm = spawnSync(args[0], args.slice(1));
 			const evaled = `stderr: ${comm.stderr.toString()}\nstdout"${comm.stdout.toString()}`
-			const cleaned = await clean(evaled);
+			const cleaned = clean(evaled);
 			const sendString = `\`\`\`bash\n${cleaned}\n\`\`\``;
 			if (sendString.length >= 2000) {
 				return {
@@ -27,9 +27,35 @@ client.on("message", async (message) => {
 				return sendString;
 			}
 		} catch (err) {
-			return `\`ERROR\` \`\`\`xl\n$s{await clean(err)}\n\`\`\``;
+			return `\`ERROR\` \`\`\`xl\n$s{clean(err)}\n\`\`\``;
 		}
 	}
 });
 
-client.login(token); // starts bot with specified token
+// functions from esmbot to do things
+function optionalReplace(token) {
+	return token === "" ? "" : "<redacted>";
+};
+
+// clean(text) to clean message of any private info or mentions
+// modified to assume text is always a string
+function clean(text) {
+	return text
+		.replace(/`/g, `\`${String.fromCharCode(8203)}`)
+		.replace(/@/g, `@${String.fromCharCode(8203)}`)
+		.replace(/</g, `<${String.fromCharCode(8203)}`)
+		.replace(process.env.TOKEN, optionalReplace(process.env.TOKEN))
+		// .replace(process.env.MASHAPE, optionalReplace(process.env.MASHAPE))
+		// .replace(process.env.CAT, optionalReplace(process.env.CAT))
+		// .replace(process.env.GOOGLE, optionalReplace(process.env.GOOGLE))
+		// .replace(process.env.DBL, optionalReplace(process.env.DBL))
+		// .replace(process.env.MONGO, optionalReplace(process.env.MONGO))
+		// .replace(process.env.TWITTER_KEY, optionalReplace(process.env.TWITTER_KEY))
+		// .replace(process.env.CONSUMER_SECRET, optionalReplace(process.env.CONSUMER_SECRET))
+		// .replace(process.env.ACCESS_TOKEN, optionalReplace(process.env.ACCESS_TOKEN))
+		// .replace(process.env.ACCESS_SECRET, optionalReplace(process.env.ACCESS_SECRET));
+		
+		// these last ones are commented out because this bot doesnt have them in the .env
+};
+
+client.login(process.env.TOKEN); // starts bot with token from .env
