@@ -1,4 +1,4 @@
-### Terminal Bot
+# Terminal Bot
 
 this discord bot allows you to do things no person should be able to do. run terminal commands directly on your host.
 
