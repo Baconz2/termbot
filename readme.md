@@ -4,7 +4,7 @@ this discord bot allows you to do things no person should be able to do. run ter
 
 i strongly reccomend running this in a vm for your own saftey.
 
-# how do i install this retched thing
+# how do i install this wretched thing
 
 install dependencies with `npm install`
 
