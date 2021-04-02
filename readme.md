@@ -16,4 +16,4 @@ and run the bot with `node index.js`
 running commands with sudo prompts your password in the terminal you launched the bot from, unless you ran any sudo commands in that terminal within the last ~5 minutes.
 this is kind of a problem if you're gonna run the bot on your host (which you shouldn't do anyway). 
 
-raspbian is dumb with sudo and allows the pi user to always run sudo by default, so watch out for that.
+raspbian is dumb with sudo and allows the pi user to always run sudo commands by default, so if you're going to run this make sure to commit visudo and change that.
